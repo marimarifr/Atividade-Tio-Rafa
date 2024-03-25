@@ -7,6 +7,7 @@ using std::string;
 int iAbsolute(int);
 int iFatorial(int);
 int iProgressao(int, int , int);
+int iFibonacci(int);
 
 
 int main()
@@ -14,6 +15,7 @@ int main()
     iAbsolute(0);
     iFatorial(-5);
     iProgressao(3,2,34);
+    iFibonacci(5);
 
     return 0;
 }
@@ -63,6 +65,24 @@ int iProgressao(int iTermoInicial, int iRazao, int iPosicaoFinal)
     cout << "O enésimo termo é " << iTermoFinal << endl;
 
     return iTermoFinal;
+
+}
+
+int iFibonacci(int iPosicao)
+{
+    int iTermoinicial = 1;
+    int iContador = 1;
+
+    int arriListaTermos[iPosicao] = {0};
+
+    int &arriListaTermos[0] = 1;
+
+    for (iContador = 1; iContador < iPosicao; iContador ++)
+    {
+        &arriListaTermos[iContador + 1] = arriListaTermos[iContador - 1] + arriListaTermos[iContador];
+    };
+
+    return arriListaTermos[iPosicao];
 
 }
 
