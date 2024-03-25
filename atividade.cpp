@@ -4,51 +4,67 @@ using std::cout;
 using std::endl;
 using std::string;
 
-int absolute(int);
-int fatorial(int);
+int iAbsolute(int);
+int iFatorial(int);
+int iProgressao(int, int , int);
+
 
 int main()
 {
-    absolute(0);
-
+    iAbsolute(0);
+    iFatorial(-5);
+    iProgressao(3,2,34);
 
     return 0;
 }
 
-int absolute(int numero)
+int iAbsolute(int iNumero)
 {
-    if (numero >= 0)
+    if (iNumero >= 0)
     {
-        cout << "O absoluto do número é: " << numero << endl; 
+        cout << "O absoluto do número é: " << iNumero << endl; 
     }
 
-    else if (numero < 0)
+    else if (iNumero < 0)
     {
-        numero = numero*(-1);
-        cout << "O absoluto do número é: " << numero << endl;
+        iNumero = iNumero*(-1);
+        cout << "O absoluto do número é: " << iNumero << endl;
     };
 
-    return numero;
+    return iNumero;
 
 }
 
-int fatorial(int base)
+int iFatorial(int iBase)
 {   
-    int i;
-    int fator;
-    if ( base < 0)
+    int iIndex;
+    int iFator;
+    if ( iBase < 0)
     {
         cout << "Não existe fatorial para negativos" << endl;
     }
 
-    else if ( base >= 0)
+    else if ( iBase >= 0)
     {
-        int fator = 1;
-        for (i=1; i< base+1; i++)
+        int iFator = 1;
+        for (iIndex=1; iIndex< iBase +1; iIndex++)
         {
-            fator = fator*i;
+            iFator = iFator*iIndex;
         };
     }
-    return fator;
+    return iFator;
 }
+
+int iProgressao(int iTermoInicial, int iRazao, int iPosicaoFinal)
+{
+    int iTermoFinal;
+    iTermoFinal = iTermoInicial + (iPosicaoFinal -1)*iRazao;
+
+    cout << "O enésimo termo é " << iTermoFinal << endl;
+
+    return iTermoFinal;
+
+}
+
+
 
