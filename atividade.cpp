@@ -5,6 +5,7 @@ using std::endl;
 using std::string;
 
 int absolute(int);
+int fatorial(int);
 
 int main()
 {
@@ -30,3 +31,24 @@ int absolute(int numero)
     return numero;
 
 }
+
+int fatorial(int base)
+{   
+    int i;
+    int fator;
+    if ( base < 0)
+    {
+        cout << "Não existe fatorial para negativos" << endl;
+    }
+
+    else if ( base >= 0)
+    {
+        int fator = 1;
+        for (i=1; i< base+1; i++)
+        {
+            fator = fator*i;
+        };
+    }
+    return fator;
+}
+
